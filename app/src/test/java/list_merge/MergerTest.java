@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 
 class MergerTest {
 
-    private UniLinkedListCreator listCreator = new UniLinkedListCreator();
+    private UniLinkedNodeCreator listCreator = new UniLinkedNodeCreator();
 
     @Test
     void mergeSorted() {
-        var firstList = listCreator.createSorted(1, 10);
-        var secondList = listCreator.createSorted(5, 7);
+        var firstList = listCreator.createSorted(1, 3);
+        var secondList = listCreator.createSorted(5, 3);
         System.out.println("firstList: " + firstList);
         System.out.println("secondList: " + secondList);
         var mergeTwoSequentially = new Merger();

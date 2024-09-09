@@ -1,30 +1,34 @@
 package list_merge;
 
-public class UniLinkedList {
+public class UniLinkedNode {
     private int value;
-    private UniLinkedList next;
+    private UniLinkedNode next;
 
-    public UniLinkedList() {
+    public UniLinkedNode() {
     }
 
-    public UniLinkedList(int value) {
+    public UniLinkedNode(int value) {
         this.value = value;
     }
 
-    public UniLinkedList(int value, UniLinkedList next) {
+    public UniLinkedNode(int value, UniLinkedNode next) {
         this.value = value;
         this.next = next;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
     }
 
     public int getValue() {
         return value;
     }
 
-    public UniLinkedList getNext() {
+    public UniLinkedNode getNext() {
         return next;
     }
 
-    public void setNext(UniLinkedList next) {
+    public void setNext(UniLinkedNode next) {
         this.next = next;
     }
 

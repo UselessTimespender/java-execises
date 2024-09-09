@@ -12,11 +12,19 @@ import java.util.List;
 public class DocumentManager {
     private static final int MAX_PARALLEL_MODIFYING_USERS_PER_DOCUMENT = 5;
 
+    /**
+     * вернуть все документы, подразумевается, что их будут только смотреть,
+     * модификация будет идти через modifyDocument(...)
+     * */
     public List<Document> getDocuments(User user) {
         return null;
     }
 
-    public Document getDocument(User user) {
+    /**
+     * одновременный просмотр документов не ограничен кол-вом юзеров
+     * также один юзер может одновременно просматривать несколько документов
+     * */
+    public Document getDocument(User user, String documentName) {
         return null;
     }
 

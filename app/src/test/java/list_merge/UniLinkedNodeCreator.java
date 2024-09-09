@@ -2,21 +2,21 @@ package list_merge;
 
 import java.util.Random;
 
-public class UniLinkedListCreator {
+public class UniLinkedNodeCreator {
     private int maxValueShift = 50;
     private int minBorder = -100;
     private int maxBorder = 100;
 
-    public UniLinkedList createSorted(int startElement, int size) {
+    public UniLinkedNode createSorted(int startElement, int size) {
         return create(startElement, size, true);
     }
 
-    public UniLinkedList createUnsorted(int startElement, int size) {
+    public UniLinkedNode createUnsorted(int startElement, int size) {
         return create(startElement, size, false);
     }
 
-    public UniLinkedList create(int startElement, int size, boolean sorted) {
-        var head = new UniLinkedList(startElement);
+    public UniLinkedNode create(int startElement, int size, boolean sorted) {
+        var head = new UniLinkedNode(startElement);
         var random = new Random();
         var currentValue = startElement;
         var currentNode = head;
@@ -28,7 +28,7 @@ public class UniLinkedListCreator {
                 nextValue = random.nextInt(minBorder, maxBorder);
             }
             currentValue = nextValue;
-            var newNode = new UniLinkedList(currentValue);
+            var newNode = new UniLinkedNode(currentValue);
             currentNode.setNext(newNode);
             currentNode = newNode;
         }
