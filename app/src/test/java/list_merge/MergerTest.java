@@ -8,8 +8,8 @@ class MergerTest {
 
     @Test
     void mergeSorted() {
-        var firstList = listCreator.createSorted(1, 3);
-        var secondList = listCreator.createSorted(5, 3);
+        var firstList = listCreator.createSorted(1, 4);
+        var secondList = listCreator.createSorted(5, 6);
         System.out.println("firstList: " + firstList);
         System.out.println("secondList: " + secondList);
         var mergeTwoSequentially = new Merger();
